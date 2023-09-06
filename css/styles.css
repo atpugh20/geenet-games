@@ -1,0 +1,46 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+
+#home-hero {
+    font-weight: bolder;
+    background-image: linear-gradient(to bottom, #434343, black);
+}
+
+#atp-logo {
+    width: 100px;
+}
+
+#home-hero p {
+    color: lightblue;
+    font-weight: 500;
+}
+
+.card-group {
+    gap: 50px;
+    justify-content: space-evenly;
+    padding-bottom: 100px;
+}
+
+.group-1 {
+    padding-top: 100px;
+}
+
+.card:hover {
+        transform: scale(110%);
+        transition: 200ms;
+    }
+
+/* Test Game */
+
+#canvas1 {
+    border: 5px solid white;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+}
