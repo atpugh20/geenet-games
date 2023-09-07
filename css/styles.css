@@ -3,6 +3,9 @@ body {
     color: white;
 }
 
+a {
+    text-decoration: none;
+}
 
 #home-hero {
     font-weight: bolder;
@@ -33,11 +36,46 @@ body {
     transition: 200ms;
 }
 
+.disabled .card:hover {
+    transform: none;
+    cursor: default;
+}
+
 .flexbox {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 50px;
+}
+
+/* Quidditch Page */
+
+#canvas-quidditch {
+    position: absolute;
+    border: solid;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+}
+
+#roster {
+    text-align: center;
+}
+
+#table-quidditch {
+    margin: 50px;
+    text-align: left;
+}
+
+th, td {
+    width: 192px;
+}
+
+th {
+    height: 50px;
+    text-decoration: underline;
 }
 
 /* Test Page Index */
