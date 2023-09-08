@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="../css/styles.css">
     <title>Quidditch Simulator</title>
+    <script src="../js/quidditch.js" type="module"></script>
 </head>
 <body>
     <div class="px-4 py-5 text-center home-hero" id="home-hero">
@@ -24,25 +25,50 @@
     </div>
 
     <div id="roster" class="">
-        <h2>Draft Class:</h2>
+        <h2>Draft Class: <button class="btn btn-success" id="generateBtn">Generate</button></h2>
+        <p id="team"></p>
+        <br>
+        <h4>Class Stats: </h4>
+        <div class="stats flexbox">
+            <div>
+                <p>Total Players: <span id="totalPlayers"></span></p>
+                <p>Average Overall: <span id="averageOverall"></span></p>
+                <p>Highest Overall: <span id="highestOverall"></span></p>
+                <p>Lowest Overall: <span id="lowestOverall"></span></p>
+            </div>
+            <div>
+                <p>Total Seekers: <span id="totalSeekers"></span></p>
+                <p>Total Beaters: <span id="totalBeaters"></span></p>
+                <p>Total Chasers: <span id="totalChasers"></span></p>
+                <p>Total Keepers: <span id="totalKeepers"></span></p>
+            </div>
+        </div>
         <table id="table-quidditch">
-            <tr>
-                <th id="position">Position</th>
-                <th id="name">Name</th>
-                <th id="overall">Overall</th>
-                <th id="speed">Speed</th>
-                <th id="shooting">Shooting</th>
-                <th id="passing">Passing</th>
-                <th id="defending">Defending</th>
-                <th id="awareness">Awareness</th>
-                <th id="strength">Strength</th>
-                <th id="reactionTime">Reaction Time</th>
-            </tr>
-        </table> 
+            
+            <thead>
+                <tr>
+                    <th id="position">Position</th>
+                    <th id="name">Name</th>
+                    <th id="overall">Overall</th>
+                    <th id="speed">Speed</th>
+                    <th id="shooting">Shooting</th>
+                    <th id="passing">Passing</th>
+                    <th id="defending">Defending</th>
+                    <th id="awareness">Awareness</th>
+                    <th id="strength">Strength</th>
+                    <th id="reactionTime">Reaction Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr></tr>
+            </tbody>
+            
+        </table>
+        
     </div>
     <!-- <canvas id="canvas-quidditch"></canvas> -->
 
-    <script src="../js/quidditch.js" type="module"></script>
+    
 
 </body>
 </html>

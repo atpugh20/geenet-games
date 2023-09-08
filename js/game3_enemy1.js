@@ -22,11 +22,11 @@ class Enemy {
         this.x = Math.random() * (canvas.width - this.width);
         this.y = Math.random() * (canvas.height - this.height);
         this.frame = 0;
-        this.flapSpeed = Math.floor(Math.random() * 10 + 5);
+        this.flapSpeed = Math.floor(Math.random() * 5 + 5);
     }
     update(){
-        this.x += Math.random() * 5 - 2.5;
-        this.y += Math.random() * 5 - 2.5;
+        this.x += Math.random() * 10 - 5;
+        this.y += Math.random() * 10 - 5;
         if (gameFrame % this.flapSpeed === 0){
             this.frame > 4 ? this.frame = 0 : this.frame++;
         }

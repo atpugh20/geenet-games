@@ -2,9 +2,9 @@
 
 const canvas = document.getElementById("canvas3");
 const ctx = canvas.getContext("2d");
-CANVAS_WIDTH = canvas.width = 500;
-CANVAS_HEIGHT = canvas.height = 800;
-const numberOfEnemies = 500;
+CANVAS_WIDTH = canvas.width = 400;
+CANVAS_HEIGHT = canvas.height = 600;
+const numberOfEnemies = 200;
 const enemiesArray = [];
 
 let gameFrame = 0;
@@ -23,15 +23,14 @@ class Enemy {
         this.frame = 0;
         this.flapSpeed = Math.floor(Math.random() * 3 + 7);
         this.angle = 0;
-        this.angleSpeed = Math.random() * 0.5 + 0.5;
+        this.angleSpeed = Math.random() * 2.5 + 0.5;
         this.curve = Math.random() * 200 + 50;
     }
     update(){
         
         // Normal Movement
-        this.x = canvas.width/2 * Math.sin(this.angle * Math.PI / 180) + (canvas.width/2 - this.width/2);
-        this.y = canvas.height/2 * Math.cos(this.angle * Math.PI / 360) + (canvas.height/2 - this.height/2);
-        
+        this.x = canvas.width/2 * Math.sin(this.angle * Math.PI / 90) + (canvas.width/2 - this.width/2);
+        this.y = canvas.height/2 * Math.cos(this.angle * Math.PI / 270) + (canvas.height/2 - this.height/2);
         // For the Circular Movement
         // this.x = this.curve * Math.sin(this.angle * Math.PI / 270) + (canvas.width/2 - this.width/2);
         // this.y = this.curve * Math.cos(this.angle * Math.PI / 270) + (canvas.height/2 - this.height/2);

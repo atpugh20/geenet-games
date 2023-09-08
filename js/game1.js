@@ -14,7 +14,7 @@ dropdown.addEventListener("change", function(e) {
 });
 
 let gameFrame = 0;
-const staggerFrames = 15;
+const staggerFrames = 5;
 const spriteAnimations = [];
 
 const animationStates = [
