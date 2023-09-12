@@ -7,6 +7,29 @@ a {
     text-decoration: none;
 }
 
+.container {
+    max-width: 1100px;
+}
+
+.hidden {
+    display: none;
+}
+
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+.test {
+    background-color: red;
+}
+
+.text-center {
+    text-align: center;
+}
+
 #home-hero {
     font-weight: bolder;
     background-image: linear-gradient(to bottom, #434343, black);
@@ -27,26 +50,22 @@ a {
     padding-bottom: 100px;
 }
 
+
 .group-1 {
     padding-top: 100px;
 }
 
-.card:hover {
+.bg-dark:hover {
     transform: scale(110%);
     transition: 200ms;
 }
 
-.disabled .card:hover {
+.disabled.btn:hover {
     transform: none;
     cursor: default;
 }
 
-.flexbox {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 50px;
-}
+
 
 /* Quidditch Page */
 
@@ -60,9 +79,6 @@ a {
     height: 600px;
 }
 
-#roster {
-    text-align: center;
-}
 
 #table-quidditch {
     width: 90%;
@@ -92,17 +108,71 @@ a {
 
 /* TURTLE PAGE */
 
-#canvasTurtle {
-    border: 3px solid black;
-    background-color: rgb(5, 7, 24);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+#turtle-map {
+    position: block;
+    margin: auto;
+    background-color: aqua;
     height: 800px;
     width: 350px;
 }
 
+#turtle {
+    width: 179px;
+    height: 161px;
+    background: url('../assets/turtle/turtleSpriteSheetTransparent.png') left center;
+    transform: scale(33%);
+    animation: play 0.75s steps(4) infinite;
+}
+@keyframes play {
+    100% { background-position: -717px; }
+ }
+
+/* Yahtzee */
+
+.dice {
+    justify-content: space-evenly;
+}
+
+.die {
+    width: 100px;
+    height: 100px;
+    border: solid 2px transparent;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.die:hover {
+    transform: scale(110%);
+}
+
+.held {
+    border: solid 2px turquoise;
+    border-radius: 10%;
+}
+
+#scoreCards.flexbox {
+    justify-content: space-evenly;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+#scoreCard {
+    border: solid 3px;
+}
+
+.scoreCard{
+    width: 400px;
+}
+
+.scoreCard th, .scoreCard td {
+    padding: 5px;
+    border: solid 1px;
+}
+
+#rollBtn{
+    margin-top: 50px;
+    margin-bottom: 50px
+}
 
 /* Test Page Index */
 
