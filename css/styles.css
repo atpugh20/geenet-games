@@ -2,73 +2,57 @@ body {
     background-color: black;
     color: white;
 }
-
 a {
     text-decoration: none;
 }
-
 .container {
     max-width: 1100px;
 }
-
 .hidden {
     display: none;
 }
-
 .flexbox {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 50px;
 }
-
 .test {
     background-color: red;
 }
-
 .text-center {
     text-align: center;
 }
-
 #home-hero {
     font-weight: bolder;
     background-image: linear-gradient(to bottom, #434343, black);
 }
-
 #atp-logo {
     width: 100px;
 }
-
 #home-hero p {
     color: lightblue;
     font-weight: 500;
 }
-
 .card-group {
     gap: 50px;
     justify-content: space-evenly;
     padding-bottom: 100px;
 }
-
-
 .group-1 {
     padding-top: 100px;
 }
-
 .bg-dark:hover {
     transform: scale(110%);
     transition: 200ms;
 }
-
-.disabled.btn:hover {
+.disabled.card:hover {
     transform: none;
     cursor: default;
 }
 
 
-
 /* Quidditch Page */
-
 #canvas-quidditch {
     position: absolute;
     border: solid;
@@ -78,8 +62,6 @@ a {
     width: 600px;
     height: 600px;
 }
-
-
 #table-quidditch {
     width: 90%;
     margin: 5%;
@@ -88,7 +70,6 @@ a {
     height: 400px;
     overflow: auto;
 }
-
 #table-quidditch thead {
     background: #111111;
     color: #fff;
@@ -101,13 +82,12 @@ a {
     width: 10%;
     padding: 5px;
 }
-
 .stats{
     justify-content: center;
 }
 
-/* TURTLE PAGE */
 
+/* TURTLE PAGE */
 #turtle-map {
     position: block;
     margin: auto;
@@ -115,7 +95,6 @@ a {
     height: 800px;
     width: 350px;
 }
-
 #turtle {
     width: 179px;
     height: 161px;
@@ -127,12 +106,11 @@ a {
     100% { background-position: -717px; }
  }
 
-/* Yahtzee */
 
+/* Yahtzee */
 .dice {
     justify-content: space-evenly;
 }
-
 .die {
     width: 100px;
     height: 100px;
@@ -140,50 +118,40 @@ a {
     padding-left: 2px;
     padding-right: 2px;
 }
-
 .die:hover {
     transform: scale(110%);
 }
-
 .held {
     border: solid 2px turquoise;
     border-radius: 10%;
 }
-
 #scoreCards.flexbox {
     justify-content: space-evenly;
     margin-top: 50px;
     margin-bottom: 25px;
 }
-
 #scoreCard {
     border: solid 3px;
 }
-
 .scoreCard{
     width: 400px;
 }
-
 .scoreCard th, .scoreCard td {
     padding: 5px;
     border: solid 1px;
 }
-
 #rollBtn{
     margin-top: 50px;
     margin-bottom: 50px
 }
 
-/* Test Page Index */
 
+/* ANIMATION TESTING */
 #test-game {
     margin-top: 100px;
     margin-bottom: 100px;
     text-align: center;
 }
-
-/* Sprite Animation Page */
-
 #canvas1 {
     position: absolute;
     background-color: white;
@@ -193,7 +161,6 @@ a {
     width: 600px;
     height: 600px;
 }
-
 .controls {
     position: absolute;
     z-index: 10;
@@ -201,17 +168,12 @@ a {
     left: 50%;
     transform: tranlateX(-50%);
 }
-
 .controls, select, option {
     font-size: 25px;
 }
-
-/* Parallax Background Page */
-
 #body-parallax {
     background-color: black;
 }
-
 #canvas2 {
     position:absolute;
     border: 3px solid white;
@@ -221,13 +183,9 @@ a {
     top: 50%;
     left: 50%;
 }
-
 p {
     color: white;
 }
-
-/* NPC Animation Page */
-
 #canvas3 {
     border: 3px solid black;
     background-color: rgb(10, 10, 10);
@@ -237,4 +195,28 @@ p {
     transform: translate(-50%, -50%);
     height: 600px;
     width: 400px;
+}
+
+
+/* Resolution Adjustments */
+@media (max-width: 740px) {
+    .die {
+        width: 50px;
+        height: 50px;
+    }
+    .scoreCard {
+        width: 200px;
+        font-size: 10px;
+    }
+    .scoreCard th, .scoreCard td {
+        padding: 5px;
+    }
+    #rollBtn{
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    #scoreCards.flexbox {
+        margin-top: 20px;
+        gap: 5px
+    }
 }
