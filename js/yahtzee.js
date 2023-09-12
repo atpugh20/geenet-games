@@ -15,14 +15,10 @@ var turnNum = 0;
 var rollList = [];
 
 function hold(e) {
-    handleHold(e.target);
-}
-
-function handleHold(e) {
     if (turnNum == 0) {
         return
     };
-    e.classList.toggle("held");
+    e.target.classList.toggle("held");
 }
 
 function roll() {
@@ -83,7 +79,7 @@ function addScore(e) {
     turnNumElement.innerText = turnNum;
     dice.forEach(e => {
         if (e.classList.contains("held")){
-            handleHold(e);
+            e.classList.remove("held");
         };
     });
 };
@@ -134,7 +130,6 @@ function validateLower(row) {
         return rollList.reduce((a,b) => a + b, 0);
     };
 };
-
 
 let table1 = document.getElementById("upperSection");
 let table2 = document.getElementById("lowerSection");
