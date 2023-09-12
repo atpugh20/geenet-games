@@ -22,7 +22,7 @@ function handleHold(e) {
     if (turnNum == 0) {
         return
     };
-    e.classList.toggle("held")
+    e.classList.toggle("held");
 }
 
 function roll() {
@@ -48,10 +48,10 @@ function roll() {
 // e.target.parentNode.rowIndex
 function addScore(e) {
     if (e.target.innerText !== ""){
-        return
+        return;
     };
     if (turnNum == 0) {
-        return
+        return;
     };
     if (e.target.parentNode.parentNode.parentNode.id === "upperSection"){
         let score = validateUpper(e.target.parentNode.rowIndex);
@@ -61,7 +61,7 @@ function addScore(e) {
         if (upperRowsComplete == 6) {
             if (upperTotal >= 63) {
                 document.getElementById("bonus").innerText = 35;
-                upperTotal += 35
+                upperTotal += 35;
             } else {
                 document.getElementById("bonus").innerText = 0;
             };
