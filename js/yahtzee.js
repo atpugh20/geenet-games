@@ -41,7 +41,6 @@ function roll() {
 
 };
 
-// e.target.parentNode.rowIndex
 function addScore(e) {
     if (e.target.innerText !== ""){
         return;
@@ -140,4 +139,3 @@ for (let i = 1; i < 8; i++) {
     };
     table2.rows[i].cells[2].addEventListener("click", addScore);
 };
-

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Ocarina</title>
+</head>
+<body>
+    <div class="px-4 py-5 text-center home-hero" id="home-hero">
+        <div class="container">
+            <img class="d-block mx-auto mb-4" id="atp-logo" src="../assets/atp_logo_transparent.png" alt="">
+            <h1 class="display-5 fw-bold text-body-white">GeeNet Games</h1>
+            <div class="col-lg-6 mx-auto">
+                <p class="lead mb-4">Arguably the greatest games of all time, presented by ATP</p>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <a href="../index.html" class="btn btn-success btn-lg px-4 gap-3">Home</a>
+                    <!-- <a href="../index.html" class="btn btn-success btn-lg px-4 gap-3">All Games</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="flexbox">
+        <button id="scrubBtn" class="disabled btn btn-success btn-lg">Scrubs</button>
+        <button id="freestyleBtn" class="btn btn-success btn-lg">Freestyle</button>
+    </div>
+    <div id="ocarina-container" class="container">
+        <div id="staff" class="flexbox">
+            <div id="lines" class="flexbox vertical">
+                <img id="clef" class="clef" src="../assets/ocarina/img/clef.png" alt="">
+                <div id="line" class="line"></div>
+                <div id="line" class="line"></div>
+                <div id="line" class="line"></div>
+                <div id="line" class="line"></div>
+                <img id="note1" src="" alt="" class="noteStaff online hidden" draggable="false">
+                <img id="note2" src="" alt="" class="noteStaff online hidden" draggable="false">
+                <img id="note3" src="" alt="" class="noteStaff online hidden" draggable="false">
+                <img id="note4" src="" alt="" class="noteStaff online hidden" draggable="false">
+                <img id="note5" src="" alt="" class="noteStaff online hidden" draggable="false">
+                <img id="note6" src="" alt="" class="noteStaff online hidden" draggable="false">
+                <img id="note7" src="" alt="" class="noteStaff online hidden" draggable="false">
+                <img id="note8" src="" alt="" class="noteStaff online hidden" draggable="false">
+            </div>
+        </div>
+        <div class="notes">
+            <img id="upC" class="upC noteButton" src="../assets/ocarina/img/upC.svg" draggable="false">
+            <img id="leftC" class="leftC noteButton" src="../assets/ocarina/img/leftC.svg" draggable="false">
+            <img id="rightC" class="rightC noteButton" src="../assets/ocarina/img/rightC.svg" draggable="false">
+            <img id="downC" class="downC noteButton" src="../assets/ocarina/img/downC.svg" draggable="false">
+            <img id="aBtn" class="aBtn noteButton" src="../assets/ocarina/img/aBtn.svg" draggable="false">
+            <img id="bBtn" class="bBtn" src="../assets/ocarina/img/b.svg" draggable="false">
+        </div>
+    </div>
+    
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>   
+<script src="../js/ocarina.js"></script>  
+</body>
+</html>
