@@ -107,10 +107,18 @@ a {
 }
 @keyframes play {
     100% { background-position: -717px; }
- }
+}
 
 
 /* Yahtzee */
+.gameRules{
+    color: aqua;
+    text-decoration: underline;
+    align-self: center;
+}
+.gameRules:hover{
+    color: purple
+}
 .dice {
     justify-content: space-evenly;
 }
@@ -123,6 +131,7 @@ a {
 }
 .die:hover {
     transform: scale(110%);
+    transition: 200ms;
 }
 .held {
     border: solid 2px turquoise;
@@ -143,9 +152,9 @@ a {
     padding: 5px;
     border: solid 1px;
 }
-#rollBtn{
-    margin-top: 50px;
-    margin-bottom: 50px
+.fillable:hover {
+    background-color: #111111;
+    cursor: pointer;
 }
 
 
@@ -159,7 +168,7 @@ a {
     margin-bottom: 100px;
     background-image: url(../assets/ocarina/img/scrubs.png);
     background-size: 1400px ;
-    background-position: -235px -120px;
+    background-position: -235px 0px;
     border-radius: 1%;
 }
 
@@ -310,8 +319,8 @@ p {
 @media (max-width: 900px) {
     #ocarina-container {
         max-width: 400px;
-        background-size: 950px ;
-        background-position: -260px -80.8px;
+        background-size: 1000px ;
+        background-position: -300px 0px;
     }
     #staff {
         padding-top: 25px;

@@ -1,10 +1,3 @@
-document.getElementById("rollBtn").addEventListener("click", roll);
-
-var dice = Array.from(document.getElementsByClassName("die"));
-dice.forEach(element => {
-    element.addEventListener("click", hold);
-});
-
 var firstRoll = true;
 var upperRowsComplete = 0;
 var lowerRowsComplete = 0
@@ -13,6 +6,29 @@ var lowerTotal = 0;
 var turnNumElement = document.getElementById("turnNum");
 var turnNum = 0;
 var rollList = [];
+var bonusYahtzeeScore = 0;
+var bonusYahtzeeReady = false;
+let table1 = document.getElementById("upperSection");
+let table2 = document.getElementById("lowerSection");
+
+// BUTTONS
+
+var dice = Array.from(document.getElementsByClassName("die"));
+dice.forEach(element => {
+    element.addEventListener("click", hold);
+});
+
+document.getElementById("rollBtn").addEventListener("click", roll);
+document.getElementById("playAgainBtn").addEventListener("click", playAgain);
+
+for (let i = 1; i < 8; i++) {
+    if (i !== 7){
+        table1.rows[i].cells[2].addEventListener("click", addScore);
+    };
+    table2.rows[i].cells[2].addEventListener("click", addScore);
+};
+
+// DICE FUNCTIONS
 
 function hold(e) {
     if (turnNum == 0) {
@@ -22,6 +38,10 @@ function hold(e) {
 }
 
 function roll() {
+    console.log(yahtzeeCell)
+    if (document.getElementById("yahtzeeCell").innerText == "50") {
+        bonusYahtzeeReady = true;
+    };
     if (turnNum == 3) {
         return;
     };
@@ -40,6 +60,8 @@ function roll() {
     turnNumElement.innerText = turnNum;
 
 };
+
+// SCORING FUNCTIONS
 
 function addScore(e) {
     if (e.target.innerText !== ""){
@@ -68,11 +90,15 @@ function addScore(e) {
         lowerTotal += score;
         lowerRowsComplete++;
         if (lowerRowsComplete == 7) {
-            document.getElementById("lowerTotal").innerText = lowerTotal;
+            document.getElementById("lowerTotal").innerText = lowerTotal + bonusYahtzeeScore;
         };
     };
+    e.target.classList.remove("fillable");
+    bonusYahtzeeCheck();
     if (upperRowsComplete + lowerRowsComplete == 13) {
-        document.getElementById("finalScore").innerText = upperTotal + lowerTotal;
+        document.getElementById("finalScore").innerText = upperTotal + lowerTotal + bonusYahtzeeScore;
+        document.getElementById("rollBtn").classList.add("hidden");
+        document.getElementById("playAgainBtn").classList.remove("hidden");
     };
     turnNum = 0;
     turnNumElement.innerText = turnNum;
@@ -130,12 +156,21 @@ function validateLower(row) {
     };
 };
 
-let table1 = document.getElementById("upperSection");
-let table2 = document.getElementById("lowerSection");
-
-for (let i = 1; i < 8; i++) {
-    if (i !== 7){
-        table1.rows[i].cells[2].addEventListener("click", addScore);
+function bonusYahtzeeCheck() {
+    let nums = [0, 0, 0, 0, 0, 0];
+    rollList.forEach(element => {
+        nums[element - 1] += 1;
+    });
+    console.log("In Check");
+    console.log(nums);
+    console.log(bonusYahtzeeReady);
+    if (bonusYahtzeeReady && (nums.filter(x => x == 5).length == 1)) {
+        document.getElementById("bonusYahtzee").innerText += "✓";
+        bonusYahtzeeScore += 100;
+        console.log("Made it in")
     };
-    table2.rows[i].cells[2].addEventListener("click", addScore);
-};
+}
+
+function playAgain() {
+    location.reload();
+}

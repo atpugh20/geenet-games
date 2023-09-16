@@ -24,10 +24,15 @@
     </div>
 
     <div class="text-center container">
-        <h2 class="">Yahtzee</h2>
-        <p>Roll Number: <span id="turnNum">0</span></p>
+        <h2 class="">YAHTZEE</h2>
+        <p>(Click a cell after rolling to log your score!)</p>
+        <a class="gameRules" href="https://www.hasbro.com/common/instruct/yahtzee.pdf">Game Rules</a>
+        <br><br>
+        <h5>Roll Number: <span id="turnNum">0</span></h5>
+        <br>
         <button id="rollBtn" class="btn btn-dark">Roll</button>
-            
+        <button id="playAgainBtn" class="btn btn-success hidden">Play Again</button>
+        <br><br>
     
         <div id="diceRow" class="hidden">
             <img src="../assets/yahtzee/dice1.png" class="die" id="die1" draggable="false">
@@ -36,6 +41,8 @@
             <img src="../assets/yahtzee/dice1.png" class="die" id="die4" draggable="false">
             <img src="../assets/yahtzee/dice1.png" class="die" id="die5" draggable="false">
         </div>
+        <br>
+        
         <div class="flexbox" id="scoreCards">
             
             <table class="scoreCard" id="upperSection">
@@ -50,32 +57,32 @@
                     <tr>
                         <td>Aces</td>
                         <td>Count and Add Only Aces</td>
-                        <td></td>
+                        <td class="fillable"></td>
                     </tr>
                     <tr>
                         <td>Twos</td>
                         <td>Count and Add Only Twos</td>
-                        <td></td>
+                        <td class="fillable"></td>
                     </tr>
                     <tr>
                         <td>Threes</td>
                         <td>Count and Add Only Threes</td>
-                        <td></td>
+                        <td class="fillable"></td>
                     </tr>
                     <tr>
                         <td>Fours</td>
                         <td>Count and Add Only Fours</td>
-                        <td></td>
+                        <td class="fillable"></td>
                     </tr>
                     <tr>
                         <td>Fives</td>
                         <td>Count and Add Only Fives</td>
-                        <td></td>
+                        <td class="fillable"></td>
                     </tr>
                     <tr>
                         <td>Sixes</td>
                         <td>Count and Add Only Sixes</td>
-                        <td></td>
+                        <td class="fillable"></td>
                     </tr>
                     <tr>
                         <td>Bonus</td>
@@ -102,37 +109,42 @@
                     <tr>
                         <td>3 of a kind</td>
                         <td>Add Total of All Dice</td>
-                        <td></td>
+                        <td class="fillable"></td>
                     </tr>
                     <tr>
                         <td>4 of a kind</td>
                         <td>Add Total of All Dice</td>
-                        <td></td>
+                        <td class="fillable"></td>
                     </tr>
                     <tr>
                         <td>Full House</td>
                         <td>SCORE 25</td>
-                        <td></td>
+                        <td class="fillable"></td>
                     </tr>
                     <tr>
                         <td>Small Straight</td>
                         <td>SCORE 30</td>
-                        <td></td>
+                        <td class="fillable"></td>
                     </tr>
                     <tr>
                         <td>Large Straight</td>
                         <td>SCORE 40</td>
-                        <td></td>
+                        <td class="fillable"></td>
                     </tr>
                     <tr>
                         <td>YAHTZEE</td>
                         <td>SCORE 50</td>
-                        <td></td>
+                        <td id="yahtzeeCell" class="fillable"></td>
                     </tr>
                     <tr>
                         <td>Chance</td>
                         <td>Add Total of All Dice</td>
-                        <td></td>
+                        <td class="fillable"></td>
+                    </tr>
+                    <tr>
+                        <td>YAHTZEE BONUS</td>
+                        <td>100 per ✓</td>
+                        <td id="bonusYahtzee"></td>
                     </tr>
                     <tr>
                         <td>Total</td>
