@@ -1,4 +1,4 @@
-turtle = document.getElementById('turtle');
+turtle = document.getElementById("turtle");
 var angle = 0;
 
 // for (let i = 0; i < 100000000000000; i++) {
@@ -6,4 +6,3 @@ var angle = 0;
 //     angle += 0.0000000001;
 //     console.log(angle);
 // }
-
